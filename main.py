@@ -1,6 +1,7 @@
 # python 3.6 32bit
 # installed package
 # 1. pyqt5
+# 2. telegram-bot
 # 3. mysql.connector
 
 import logging
@@ -26,7 +27,8 @@ class Operator(QMainWindow):
         super().__init__()
         # transaction start time
         self.start_time = 90000
-
+        # logger
+        self.logger = object()
         # today
         self.today = time.strftime("%Y%m%d")
 
@@ -65,7 +67,7 @@ class Operator(QMainWindow):
         formatter = logging.Formatter('[%(levelname)s:%(lineno)s] %(asctime)s > %(message)s')
         self.logger = logging.getLogger()
 
-        fh = TimedRotatingFileHandler("C:\SMWJ_LOG\\etl", when="midnight")
+        fh = TimedRotatingFileHandler("C:\SMWJ_LOG\\trade", when="midnight")
         fh.setFormatter(formatter)
         fh.suffix = "_%Y%m%d.log"
 
