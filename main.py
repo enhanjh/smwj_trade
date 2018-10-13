@@ -3,6 +3,7 @@
 # 1. pyqt5
 # 2. telegram-bot
 # 3. mysql.connector
+# 4. win-unicode-console
 
 import logging
 import sys

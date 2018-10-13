@@ -1,0 +1,4 @@
+
+*.pyc
+const/stat.py
+stdout.txt
