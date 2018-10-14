@@ -35,13 +35,14 @@ class Operator(QMainWindow):
 
         # sub classes init
         self.logger_start()
-        self.kiwoom = kw.KiwoomWindow(self)
+        
         self.chatbot_start()
         self.selljob_start()
 
         # business day check
         if self.bizday_check():
             # api connect
+            self.kiwoom = kw.KiwoomWindow(self)
             self.api_connect()
             # db connect
         else:
